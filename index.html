@@ -1,3 +1,14 @@
+    .love-fall {
+      position: fixed;
+      top: -40px;
+      left: 50%;
+      font-size: 2rem;
+      z-index: 0; /* Lebih rendah dari konten utama */
+      pointer-events: none;
+      animation: loveFall 3s linear forwards;
+      transform: translateX(-50%);
+      user-select: none;
+    }
 <!DOCTYPE html>
 <html>
 <meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
@@ -87,15 +98,15 @@
      
      <p id="halo" class="halo"></p>
      
-     <div><blockquote id='bq' data-text='㋡'>
+     <div><blockquote id='bq' data-text=''>
        <p id="kalimat">Aku Ada Sesuatu Nih 🤣❤️</p>
 
-       <p id="pesan1">Klik 4 LOVE di Bawah! 😆❤️</p>
+       <p id="pesan1">Klik 4 icon di Bawah Ya</p>
        <div id="kolombaru">
-         <li id="lv1"><img src="pang.png" alt=""></li>
-         <li id="lv2">🤍</li>
-         <li id="lv3">🤍</li>
-         <li id="lv4">🤍</li>
+         <li id="lv1">🎁</li>
+         <li id="lv2">🎈</li>
+         <li id="lv3">🎉</li>
+         <li id="lv4">🧡</li>
        </div>
 
        <p id="pesan2">Tunggu...</p>
@@ -103,7 +114,7 @@
        <p id="pesan3">Ciee.. Ada yang Ultah Nih 🤣❤️</p>
        <p id="pesan4">Happy Birthday, </p>
        <p id="pesan5" class="gaya2">Nambah tua aja ya, hehe</p>
-       <p id="pesan6" class="gaya2">Moga panjang umur biar tiap tahun bisa traktirin aku wkwk 😆❤️</p>
+       <p id="pesan6" class="gaya2">Semoga Panjang Umur Supaya Bisa Mabar Roblox Sama Kita 😋</p>
        <p id="pesan7" class="gaya2">Sehat selalu ya!</p>
 
        <p id="pesan8" class="gaya2">Canda wkwwk :v</p>
@@ -141,7 +152,7 @@
   function loveBerjatuhan() {
     const love = document.createElement("div");
     love.className = "love-fall";
-    love.innerText = "💖";
+    love.innerText = "🤍";
     // Random horizontal position (10vw - 90vw)
     love.style.left = (10 + Math.random() * 80) + "vw";
     love.style.fontSize = (1.5 + Math.random() * 2) + "rem";
@@ -173,7 +184,7 @@
       var nama = "Suya";
         if(nama && nama.length < 11){
           window.nama = nama;
-          vketikhalo="Hai, " + nama + " ✨";
+          vketikhalo="Hello " + nama + " ✨";
           mulainama();
           } else {
             await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!');inipesan();
@@ -186,7 +197,6 @@
   var tompositif = 'Mau';
   var tomnegatif = 'Engga';
     
-    async function menuju(){pesanwhatsapp = "Makasii udah ngucapin " + nama + " ultah ><";await swals.fire('OK!', 'Kirim jawabannya ke WhatsApp aku, ya!', 'success');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
 </script>
 <script src="script.js"></script>
 <!-- Sampai Sini -->
